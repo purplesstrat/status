@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Unblocked Copies</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0c0c0c;
+      color: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-size: 52px;
+      margin-bottom: 50px;
+      text-align: center;
+      background: linear-gradient(90deg, #8e2de2, #4a00e0);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .url-list {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .url-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #1b1b1b;
+      padding: 16px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .status {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    .status.ok {
+      color: #22c55e;
+    }
+    .status.bad {
+      color: #ef4444;
+    }
+    button {
+      background: #4a00e0;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+      width: 100%;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+    button:hover {
+      background: #5b13e8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Unblocked Copies</h1>
+  <p1>The websites contents are from irv77 (https://github.com/irv77)</p1>
+  <p2>The websites were uploaded by purplesstrat to vercel.app</p2>
+  <div class="url-list" id="urlList"></div>
+
+  <script>
+    const data = [
+      {"url": "https://purplesstrat.github.io/eagler", "status": "working"},
+      {"url": "https://2slick4u.vercel.app/", "status": "working"},
+      {"url": "https://very-educational-game.vercel.app/", "status": "working"},
+      {"url": "https://mathstests.vercel.app/", "status": "working"},
+      {"url": "https://learn-coding.vercel.app/", "status": "working"},
+      {"url": "https://wireps.vercel.app/", "status": "working"},
+      {"url": "https://smoothwall-security.vercel.app/", "status": "working"},
+      {"url": "https://smoothwall-api.vercel.app/", "status": "working"},
+      {"url": "https://duolingo-api-six.vercel.app/", "status": "working"},
+      {"url": "https://mangosecurity.vercel.app/", "status": "working"},
+      {"url": "https://redbridge-council.vercel.app/", "status": "working"}
+    ];
+
+    const list = document.getElementById('urlList');
+
+    data.forEach(entry => {
+      const div = document.createElement('div');
+      div.className = 'url-item';
+
+      const status = document.createElement('span');
+      status.className = 'status ' + (entry.status === 'working' ? 'ok' : 'bad');
+      status.textContent = entry.status === 'working' ? '✅' : '❌';
+
+      const openBtn = document.createElement('button');
+      openBtn.textContent = entry.url;
+      openBtn.onclick = () => {
+        window.open(entry.url, '_blank');
+      };
+
+      div.appendChild(status);
+      div.appendChild(openBtn);
+      list.appendChild(div);
+    });
+  </script>
+
+<script>
+console.log("Unblocked Copies\nA website to play Minecraft on school computers.\nThese websites were made by irv77 on GitHub.")
+</script>
+</body>
+</html>

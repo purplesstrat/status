@@ -3,84 +3,51 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Unblocked Copies</title>
+  <title>Unblocked Minecraft Sites</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0c0c0c;
-      color: #f5f5f5;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 40px 20px;
-      box-sizing: border-box;
-    }
-    h1 {
-      font-size: 52px;
-      margin-bottom: 50px;
-      text-align: center;
-      background: linear-gradient(90deg, #8e2de2, #4a00e0);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-    .url-list {
-      width: 100%;
-      max-width: 800px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .url-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #1b1b1b;
-      padding: 16px 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    }
-    .status {
-      font-size: 24px;
-      margin-right: 10px;
-    }
-    .status.ok {
-      color: #22c55e;
-    }
-    .status.bad {
-      color: #ef4444;
-    }
-    button {
-      background: #4a00e0;
-      border: none;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s;
-      width: 100%;
-      text-align: center;
-      overflow-wrap: anywhere;
-    }
-    button:hover {
-      background: #5b13e8;
-    }
+    :root{--bg:#0b0f14;--card:#0f1720;--accent:#7c5cff;--text:#e6eef6}
+    body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+    .container{max-width:920px;margin:24px 0 60px 24px}
+    header{display:flex;align-items:center;gap:12px}
+    h1{margin:0;font-size:30px;font-weight:800;color:var(--text)}
+    .subtitle{font-size:13px;color:#9aa6b2;margin-top:6px}
+
+    .url-list{margin-top:18px;display:flex;flex-direction:column;gap:8px}
+    .url-item{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+    .left{display:flex;align-items:center;gap:12px;min-width:0}
+    .icon{width:36px;height:36px;border-radius:8px;background:#0b1220;flex-shrink:0;background-size:cover;background-position:center;background-repeat:no-repeat;}
+    .meta{display:flex;flex-direction:column;min-width:0}
+    .meta .title{font-weight:700;font-size:13px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .meta .url{font-size:12px;color:#9aa6b2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .actions{display:flex;align-items:center;gap:10px}
+    .status{font-size:12px;font-weight:700;text-transform:uppercase;padding:6px 8px;border-radius:6px}
+    .status.working{background:rgba(34,197,94,0.12);color:#16a34a}
+    .status.patched{background:rgba(239,68,68,0.08);color:#ef4444}
+    .open-btn{background:none;border:0;padding:0;cursor:pointer;display:inline-flex;align-items:center}
+    .open-btn img{width:22px;height:22px;display:block}
+
+    @media (max-width:760px){.container{margin:16px;padding-right:16px}.meta .title{font-size:12px}.meta .url{font-size:11px}}
   </style>
 </head>
 <body>
-  <h1>Unblocked Copies</h1>
-  <p1>The websites contents are from irv77 (https://github.com/irv77)</p1>
-  <p2>The websites were uploaded by purplesstrat to vercel.app</p2>
-  <div class="url-list" id="urlList"></div>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Unblocked Minecraft Websites</h1>
+        <div class="subtitle">Minecraft websites you can use to play on your school's computer.</div>
+<div class="subtitle">This websites bypasses SmoothWall security.</div>
+<div class="subtitle">The website's contents are from irv77 (GitHub) and the website domains are uploaded by purplesstrat.</div>
+      </div>
+    </header>
+
+    <div class="url-list" id="urlList"></div>
+  </div>
 
   <script>
     const data = [
       {"url": "https://purplesstrat.github.io/eagler", "status": "working"},
       {"url": "https://2slick4u.vercel.app/", "status": "working"},
-      {"url": "https://very-educational-game.vercel.app/", "status": "working"},
+      {"url": "https://very-educational-game.vercel.app/", "status": "patched"},
       {"url": "https://mathstests.vercel.app/", "status": "working"},
       {"url": "https://learn-coding.vercel.app/", "status": "working"},
       {"url": "https://wireps.vercel.app/", "status": "working"},
@@ -88,33 +55,69 @@
       {"url": "https://smoothwall-api.vercel.app/", "status": "working"},
       {"url": "https://duolingo-api-six.vercel.app/", "status": "working"},
       {"url": "https://mangosecurity.vercel.app/", "status": "working"},
-      {"url": "https://redbridge-council.vercel.app/", "status": "working"}
+      {"url": "https://redbridge-council.vercel.app/", "status": "working"},
+      {"url": "https://fruitbox-deployment.vercel.app/", "status": "working"},
+      {"url": "https://47pixels-five.vercel.app/", "status": "working"},
+      {"url": "https://49pixels.vercel.app/", "status": "working"},
+      {"url": "https://48pixels.vercel.app/", "status": "working"},
+      {"url": "https://mango-api-six.vercel.app/", "status": "working"},
+      {"url": "https://pixelated-api.vercel.app/", "status": "working"}
     ];
 
+    const openIcon = "https://purplesstrat.github.io/status/open.png";
+    const iconUrl =  "https://purplesstrat.github.io/status/favicon.png";
     const list = document.getElementById('urlList');
 
     data.forEach(entry => {
-      const div = document.createElement('div');
-      div.className = 'url-item';
+      const row = document.createElement('div');
+      row.className = 'url-item';
 
-      const status = document.createElement('span');
-      status.className = 'status ' + (entry.status === 'working' ? 'ok' : 'bad');
-      status.textContent = entry.status === 'working' ? '✅' : '❌';
+      const left = document.createElement('div');
+      left.className = 'left';
+
+      const icon = document.createElement('div');
+      icon.className = 'icon';
+      icon.style.backgroundImage = `url(${iconUrl})`; 
+      icon.style.backgroundSize = 'cover';
+      icon.style.backgroundPosition = 'center';
+      icon.style.backgroundRepeat = 'no-repeat';
+
+      const meta = document.createElement('div');
+      meta.className = 'meta';
+      const title = document.createElement('div');
+      title.className = 'title';
+      title.textContent = `${entry.status.toUpperCase()} COPY`;
+      const urlEl = document.createElement('div');
+      urlEl.className = 'url';
+      urlEl.textContent = entry.url;
+
+      meta.appendChild(title);
+      meta.appendChild(urlEl);
+      left.appendChild(icon);
+      left.appendChild(meta);
+
+      const actions = document.createElement('div');
+      actions.className = 'actions';
+
+      const status = document.createElement('div');
+      status.className = 'status ' + entry.status;
+      status.textContent = entry.status;
 
       const openBtn = document.createElement('button');
-      openBtn.textContent = entry.url;
-      openBtn.onclick = () => {
-        window.open(entry.url, '_blank');
-      };
+      openBtn.className = 'open-btn';
+      const img = document.createElement('img');
+      img.src = openIcon;
+      img.alt = 'Open';
+      openBtn.appendChild(img);
+      openBtn.onclick = () => window.open(entry.url, '_blank');
 
-      div.appendChild(status);
-      div.appendChild(openBtn);
-      list.appendChild(div);
+      actions.appendChild(status);
+      actions.appendChild(openBtn);
+
+      row.appendChild(left);
+      row.appendChild(actions);
+      list.appendChild(row);
     });
   </script>
-
-<script>
-console.log("Unblocked Copies\nA website to play Minecraft on school computers.\nThese websites were made by irv77 on GitHub.")
-</script>
 </body>
 </html>
